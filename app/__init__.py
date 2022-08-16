@@ -1,5 +1,6 @@
 from flask import Flask  # 从flask包中导入Flask类
 from flask_login import LoginManager
+from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
@@ -15,6 +16,8 @@ migrate = Migrate(app, db)
 
 login = LoginManager(app)
 login.login_view = 'login'
+
+mail = Mail(app)
 
 # 放在后面可以防止循环引用
 from app import routes, models
