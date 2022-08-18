@@ -23,3 +23,6 @@ class Config:
     POSTS_PER_PAGE = 2
 
     LANGUAGES = ['en', 'zh']  # 注意：不要填写zh_CN。有坑！
+
+    APPID = os.environ.get('APPID')
+    BD_TRANSLATOR_KEY = os.environ.get('BD_TRANSLATOR_KEY')
